@@ -1,0 +1,741 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cairo", sans-serif;
+    /* font-family: "Montserrat", serif;*/
+}
+
+
+:root {
+    --primary-color: #002f49;
+    --secondary-color: #db5461;
+    --text-color: #333333;
+    --bg-color: #ffffff;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
+}
+
+
+
+body {
+
+    scroll-behavior: smooth;
+    font-family: "Cairo", serif;
+    font-family: "Montserrat", serif;
+}
+
+/* الخلفية */
+header {
+    position: relative;
+    height: 90vh;
+    background-color: #002f49;
+    overflow: hidden;
+}
+
+/* تأثيرات الخلفية */
+.background-effects {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* بقع اللون الزهري */
+.pink-blur {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(219, 84, 97, 0.7), transparent);
+    filter: blur(100px);
+}
+
+.pink-top-left {
+    top: -120px;
+    left: -100px;
+}
+
+.pink-top-right {
+    top: -200px;
+    right: -100px;
+}
+
+/* تدرج اللون الكحلي */
+.blue-blur {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    filter: blur(150px);
+    bottom: -200px;
+    left: -200px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: transparent;
+    position: relative;
+    z-index: 10;
+    height: 20vh;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 25px;
+}
+
+.nav-links {
+    width: 1080px;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    padding: 55px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #db5461;
+}
+
+.nav-links span {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-btn {
+    color: #f8f8f8;
+    display: inline-block;
+    padding: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 3px solid #ffffff;
+    background-color: transparent;
+    text-transform: capitalize;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    margin-right: 45px ;
+    width: 100px;
+}
+
+.nav-btn:hover {
+    background-color:#f8f8f8;
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* شريط البحث */
+.search-container {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    width: 350px;
+    margin-bottom: 20px;
+}
+
+.search-container span {
+    color: white;
+    margin: 0 5px;
+}
+
+.search-input {
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px 0px 0px 50px;
+    color: white;
+    font-size: 16px;
+    width: 300px;
+    height: 45px;
+    padding: 5px;
+    outline: none;
+}
+
+.search-btn {
+    background: #db5461;
+    border: none;
+    width: 60px;
+    height: 45px;
+    padding: 8px;
+    border-radius: 0px 50px 50px 0px;
+    cursor: pointer;
+}
+
+.search-btn i {
+    color: white;
+    font-size: 16px;
+}
+
+/* قسم الهيرو */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+/* المحتوى الرئيسي */
+.content-container {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* النص في الثلث الأيمن */
+.text-content {
+    color: white;
+    max-width: 33.3%;
+    text-align: right;
+    margin-left: 40px;
+}
+
+.text-content h2 {
+    direction: rtl;
+    font-size: 45px;
+    font-weight: bold;
+
+}
+
+.text-content h3 {
+    direction: rtl;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(255, 255, 255, 0.7);
+    margin-bottom: 120px;
+}
+
+
+/* الصورة في المنتصف */
+.main-image img {
+    text-align: center;
+    width: 645px;
+    height: 421px;
+    margin-bottom: 120px;
+    margin-left: 38px;
+    transition: transform 0.3s;
+}
+
+.main-image img:hover {
+    transform: scale(1.1);
+}
+
+/* الشعار في الثلث الأيسر */
+.logo-image img {
+    text-align: center;
+    width: 243px;
+    height: 201px;
+    margin-bottom: 120px;
+    margin-left: 20px;
+}
+
+/*Services*/
+.services-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+}
+
+.services-section h1 {
+    font-family: "cairo", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.services-section p {
+    font-family: "cairo", sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* تصميم الـ Swiper */
+.services-section .swiper {
+    font-family: "cairo", sans-serif;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.services-section .swiper-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* توزيع العناصر بالتساوي */
+}
+
+.services-section .swiper-slide {
+    width: 320px;
+    height: 450px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    background: #fff;
+    color: #000;
+    position: relative;
+}
+
+/* تنسيق الصورة داخل السلايد */
+.services-section .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* تصميم طبقة الشفافية والنص داخلها */
+.services-section .swiper-slide .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 47, 73, 0.4);
+    /* طبقة شفافة تغطي الكرت بالكامل */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* النص يبدأ من الأسفل */
+    opacity: 0;
+    /* البداية تكون الطبقة غير مرئية */
+    transform: translateY(100%);
+    /* النص يبدأ من الأسفل */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* تأثير الظهور والتحريك */
+}
+
+.services-section .swiper-slide.swiper-slide-active .overlay {
+    opacity: 1;
+    /* يظهر عند كون الشريحة نشطة */
+    transform: translateY(0);
+    /* الطبقة تظهر بالكامل */
+}
+
+.services-section .swiper-slide .overlay span {
+    color: whitesmoke;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    /* مسافة من الأسفل */
+    transform: translateY(100%);
+    /* يبدأ النص من الأسفل */
+    transition: transform 0.3s ease;
+    /* تأثير التحريك */
+}
+
+.services-section .swiper-slide.swiper-slide-active .overlay span {
+    transform: translateY(-200px);
+    /* النص يتحرك للأعلى ويتوقف عند منتصف الكرت */
+}
+
+/* تنسيق الـ Pagination */
+.services-section .swiper-pagination-bullet {
+    background: var(--primary-color);
+    opacity: 0.5;
+}
+
+.services-section .swiper-pagination-bullet-active {
+    background: var(--secondary-color);
+    opacity: 1;
+}
+
+/*Our Projects*/
+
+.our-projects {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.our-projects h1 {
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.our-projects p {
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.card-project {
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.img-container {
+    transition: 0.4s;
+}
+
+.img-container:hover {
+    transform: scale(1.4) translateY(25px);
+    z-index: 2;
+}
+
+.img-container:hover~.card-body {
+    filter: blur(5px);
+    opacity: 0.6;
+    transition: filter 0.4s ease, opacity 0.4s ease;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: -30px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #e47f89;
+    background-color: transparent;
+    text-transform: capitalize;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.card-btn:hover {
+    background-color: #e47f89;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.card-btn a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.card-btn:hover a {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+/*status section*/
+.stats-section {
+    margin-top: 25px;
+    padding: 50px;
+    text-align: center;
+    background-color: #f8f8f8;
+
+}
+
+.stat-item {
+    display: inline-block;
+    margin: 50px;
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.stats-section h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.stats-section p {
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    line-height: 1.5;
+    margin: 10px;
+    cursor: pointer;
+    transition: all .42s;
+}
+
+/*our team*/
+.team {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.team h2 {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.team p {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.wrapper {
+    perspective: 3000px;
+    display: flex;
+    margin: 30px auto;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    width: 360px;
+    height: 530px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    position: relative;
+}
+
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+
+.front-page,
+.back-page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.front-page {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    z-index: -1;
+}
+
+.card-info {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.team .card-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-subtitle {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.back-page {
+    background-color: var(--primary-color);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.card-content {
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+}
+
+.card-content h3 {
+    color: #ccc;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.card-button {
+    background-color: #0fbcf9;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: transparent;
+    color: #0fbcf9;
+    border: 1px solid #0fbcf9;
+}
+
+/*Footer*/
+.contact {
+    text-align: right;
+    margin-top: 20px;
+    padding: 40px;
+    background-color: #f8f8f8;
+
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+    gap: 3rem;
+
+}
+
+.first-info img {
+    width: 140px;
+    height: auto;
+}
+
+.contact-info h4 {
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    color: #406377;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all .42s;
+
+}
+
+.second-info a {
+    display: flex;
+    text-decoration: none;
+    color: #406377;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all .42s;
+}
+
+.five a {
+    display: flex;
+    text-decoration: none;
+    color: #406377;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all .42s;
+
+}
+
+
+.contact-info a:hover {
+    color: var(--primary-color);
+}
+
+.contact-info p:hover {
+    color: var(--primary-color);
+}
+
+.social-icon i {
+    color: var(--secondary-color);
+    margin-right: 10px;
+    font-size: 20px;
+    transition: all .42s;
+
+}
+
+.social-icon i:hover {
+    transform: scale(1.3);
+}
+
+.end-text {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 20px;
+    color: whitesmoke;
+    text-transform: capitalize;
+}

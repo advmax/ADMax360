@@ -1,0 +1,26 @@
+{
+  "ar": {
+    "services-title": "خدماتنا",
+    "services-description": "نقدم مجموعة متنوعة من الخدمات الرقمية لمساعدتك على النجاح في عالم الأعمال.",
+    "graphic-design": "تصميم غرافيك",
+    "web-design": "تصميم مواقع ويب",
+    "photography": "التصوير الفوتوغرافي",
+    "video-shooting": "تصوير الفيديو",
+    "branding": "تصميم العلامات التجارية",
+    "traditional-advertising": "الإعلانات التقليدية",
+    "creative-support": "الدعم الإبداعي",
+    "digital-marketing": "التسويق الإلكتروني"
+  },
+  "en": {
+    "services-title": "Our Services",
+    "services-description": "We offer a variety of digital services to help you succeed in the business world.",
+    "graphic-design": "Graphic Design",
+    "web-design": "Web Design",
+    "photography": "Photography",
+    "video-shooting": "Video Shooting",
+    "branding": "Branding",
+    "traditional-advertising": "Traditional Advertising",
+    "creative-support": "Creative Support",
+    "digital-marketing": "Digital Marketing"
+  }
+}
